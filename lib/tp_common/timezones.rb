@@ -68,11 +68,5 @@ module TpCommon
       zone = zone_abbreviation(time_zone_key)
       DateTime.parse(time.strftime("%d %b %Y %H:%M:%S #{time.in_time_zone(zone).formatted_offset}"))
     end
-
-    def self.converted_in_time_zone_enqueue_installment
-      # enqueue at 21:00pm America/Los_Angeles. it's eq with 4am UTC of next day.
-      # So we need to get Time.current.in_time_zone('America/Los_Angeles')
-      Time.current.in_time_zone('America/Los_Angeles')
-    end
   end
 end
