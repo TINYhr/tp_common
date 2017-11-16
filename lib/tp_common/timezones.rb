@@ -1,6 +1,8 @@
+require 'tp_common/timezones/config'
+
 module TpCommon
   module Timezones
-    LIST_ZONES = TpCommon.load_timezones.freeze
+    # LIST_ZONES = # Dynamic defined in TpCommon::Timezones::Config
 
     def self.current_date_in_time_zone(time_zone_key)
       self.converted_time(Time.now, time_zone_key).strftime('%Y-%m-%d %H:%M:%S').to_date
