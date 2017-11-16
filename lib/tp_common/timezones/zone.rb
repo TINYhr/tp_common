@@ -2,7 +2,6 @@ module TpCommon
   module Timezones
     class Zone
       SECONDS_IN_AN_HOUR = 3600
-      DAY_LIGHT_SAVING_ZONES = ['Etc/GMT+9', 'Etc/GMT+8', 'Etc/GMT+7', 'Etc/GMT+6', 'Etc/GMT+5'].freeze
 
       attr_reader :key
 
@@ -30,14 +29,12 @@ module TpCommon
 
       private
 
-      attr_reader :time, :name
-
       def gmt_12
-        time.in_time_zone('Etc/GMT-12')
+        @time.in_time_zone('Etc/GMT-12')
       end
 
       def organization_time
-        time.in_time_zone(name)
+        @time.in_time_zone(@name)
       end
 
       def time_difference_in_seconds

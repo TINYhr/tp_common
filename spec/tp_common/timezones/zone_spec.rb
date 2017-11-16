@@ -248,4 +248,28 @@ RSpec.describe TpCommon::Timezones::Zone do
 
     it { is_expected.to eq(Date.new(2017, 2, 3)) }
   end
+
+  describe '#key' do
+    let(:time) { Time.new(2017, 2, 3, 10, 0, 0) }
+    let(:key) { 'GMT_M0700' }
+
+    let(:zone) do
+      time_zone = TpCommon::Timezones::LIST_ZONES[key]
+      described_class.new(time, key, time_zone[:name], time_zone[:title])
+    end
+
+    subject { zone }
+
+    it "exposes key attribute" do
+      expect(subject.key).to eq(key)
+    end
+
+    it "NOT exposes name attribute" do
+      expect{ subject.name }.to raise_error(StandardError)
+    end
+
+    it "NOT exposes title attribute" do
+      expect{ subject.title }.to raise_error(StandardError)
+    end
+  end
 end
