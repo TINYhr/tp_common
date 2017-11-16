@@ -1,6 +1,8 @@
 module TpCommon
   module Timezones
     class Config
+      # Try to load TpCommon::Timezones::LIST_ZONES in config/timezones.yml from rails app.
+      # if not, load the default in timezones/config/timezones.yml
       def self.config
         return if TpCommon::Timezones.const_defined?("LIST_ZONES")
         if defined?(::Rails::Railtie)
@@ -17,6 +19,10 @@ module TpCommon
         TpCommon::Timezones.const_set("LIST_ZONES", load_default_timezones)
       end
 
+      # Private
+      # Load the default TpCommon::Timezones::LIST_ZONES in timezones/config/timezones.yml
+      # This method is clone from Rails' config_for
+      #
       def self.load_default_timezones
         file_path = File.join(File.dirname(__FILE__),"config/timezones.yml")
         yaml = Pathname.new(file_path)

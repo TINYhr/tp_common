@@ -1,8 +1,8 @@
+[![Build Status](https://travis-ci.org/anvox/tp_common.svg?branch=master)](https://travis-ci.org/anvox/tp_common)
+
 # TpCommon
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tp_common`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem contains common libraries which shared between projects used in TINYpulse.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Reference http://www.rubydoc.info/gems/tp_common for more detail of each module.
 
 ## Development
 
