@@ -3,10 +3,18 @@ require 'active_support/all'
 require 'psych'
 require 'yaml'
 
-# require 'pry-byebug'
-
 module TpCommon
   def self.load_timezones
+    begin
+      return Rails.application.config_for(:timezones)
+    rescue NameError
+      "No Rails."
+    rescue NoMethodError
+      "Rails has no `application` or `config_for`."
+    rescue StandardError
+      "No config/timezones.yaml or the unable to parse. Use default"
+    end
+
     file_path = File.join(File.dirname(__FILE__),"config/timezones.yml")
     yaml = Pathname.new(file_path)
 

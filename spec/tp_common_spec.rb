@@ -27,5 +27,14 @@ RSpec.describe TpCommon do
         expect(zone[:dst]).not_to be_nil
       end
     end
+
+    context 'in rails apps' do
+      context 'rails version not support `config_for`'
+      context 'rails version support `config_for`' do
+        context 'rails app has NO config/timezones.yml'
+        context 'rails app has invalid config/timezones.yml'
+        context 'rails app has valid config/timezones.yml'
+      end
+    end
   end
 end

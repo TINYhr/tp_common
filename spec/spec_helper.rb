@@ -1,7 +1,9 @@
 require "bundler/setup"
-require "tp_common"
 
 require "timecop"
+require 'pry-byebug'
+
+require "tp_common"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
