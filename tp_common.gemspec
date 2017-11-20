@@ -34,7 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry-byebug", '~> 3'
   spec.add_development_dependency "timecop", '~> 0.9'
 
-  spec.add_runtime_dependency "psych", '~> 2'
   spec.add_runtime_dependency "tzinfo", '~> 1.2', '>= 1.2.0'
   spec.add_runtime_dependency "activesupport", '~> 4.2', '>= 4.2.0'
 end
