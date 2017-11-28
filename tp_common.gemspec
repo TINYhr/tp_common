@@ -6,12 +6,12 @@ require "tp_common/version"
 Gem::Specification.new do |spec|
   spec.name          = "tp_common"
   spec.version       = TpCommon::VERSION
-  spec.authors       = ["An Vo"]
-  spec.email         = ["thien.an.vo.nguyen@gmail.com"]
+  spec.authors       = ["TINYpulse Devops"]
+  spec.email         = ["devops@tinypulse.com"]
 
   spec.summary       = "Common libraries used for TINYpulse apps"
   spec.description   = "Common libraries used for TINYpulse apps. i.e. Timezone, ..."
-  spec.homepage      = "https://github.com/anvox/tp_common"
+  spec.homepage      = "https://github.com/TINYhr/tp_common"
   spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
