@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/TINYhr/tp_common.svg?branch=master)](https://travis-ci.org/TINYhr/tp_common)
+[![Gem Version](https://badge.fury.io/rb/tp_common.svg)](https://badge.fury.io/rb/tp_common)
 
 # TpCommon
 
