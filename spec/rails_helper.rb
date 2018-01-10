@@ -3,7 +3,8 @@ require "bundler/setup"
 require "timecop"
 require "pry-byebug"
 
-require "tp_common"
+FIXTURES_PATH ||= Pathname.new(File.expand_path('../fixtures/', __FILE__))
+Dir["./spec/support/integration/share_examples/*.rb"].sort.each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

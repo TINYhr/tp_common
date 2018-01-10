@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe TpCommon::Timezones::Zone do
+  before(:all) { TpCommon::Timezones::Config.config }
+
   describe '#offset' do
     let(:time) { Time.now }
     let(:zone) do

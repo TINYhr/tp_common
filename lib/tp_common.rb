@@ -4,6 +4,7 @@ require 'psych'
 require 'yaml'
 
 if defined?(::Rails::Railtie)
+  raise Gem::DependencyError.new('Rails version < 4 is not supported.') if ::Rails::VERSION::MAJOR < 4
   require 'tp_common/railtie'
 end
 

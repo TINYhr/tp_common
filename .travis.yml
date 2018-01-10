@@ -2,4 +2,11 @@ sudo: false
 language: ruby
 rvm:
   - 2.3.1
+gemfile:
+  - gemfiles/rails_4.gemfile
+  - gemfiles/rails_5.gemfile
 before_install: gem install bundler -v 1.16.0
+script:
+  - bundle exec rspec --exclude-pattern "spec/integration/**/*_spec.rb"
+  - bundle exec rspec spec/integration/rails_spec.rb
+  - bundle exec rspec spec/integration/rails_custom_timezones_spec.rb

@@ -1,6 +1,8 @@
 require "spec_helper"
 
 RSpec.describe TpCommon::Timezones do
+  before(:all) { TpCommon::Timezones::Config.config }
+
   describe '.current_date_in_time_zone' do
     subject { described_class.current_date_in_time_zone(zone_name) }
 
@@ -60,7 +62,7 @@ RSpec.describe TpCommon::Timezones do
         let(:zone_name) { 'Asia/Tehran' }
         it{ is_expected.to eq('GMT+3') }
       end
-      context 'when zone_name is America/Phoenix' do
+      context 'when zone_name is America/Los_Angeles' do
         let(:zone_name) { 'America/Los_Angeles' }
         it{ is_expected.to eq('GMT-8') }
       end
@@ -76,7 +78,7 @@ RSpec.describe TpCommon::Timezones do
         let(:zone_name) { 'Asia/Tehran' }
         it{ is_expected.to eq('GMT+4') }
       end
-      context 'when zone_name is America/Phoenix' do
+      context 'when zone_name is America/Los_Angeles' do
         let(:zone_name) { 'America/Los_Angeles' }
         it{ is_expected.to eq('GMT-7') }
       end

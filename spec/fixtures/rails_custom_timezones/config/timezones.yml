@@ -1,0 +1,186 @@
+gmt-12: &gmt-12
+  GMT_M1200:
+    :title: 'International Date Line (West)'
+    :name: 'Etc/GMT+12'
+    :dst: false
+
+gmt-11: &gmt-11
+  GMT_M1100:
+    :title: 'Midway Island, Samoa'
+    :name: 'Etc/GMT+11'
+    :dst: false
+
+gmt-10: &gmt-10
+  GMT_M1000:
+    :title: 'Hawaii, Honolulu'
+    :name: 'Etc/GMT+10'
+    :dst: false
+
+gmt-9: &gmt-9
+  GMT_M0900:
+    :title: 'Alaska'
+    :name: 'Etc/GMT+9'
+    :dst: false
+
+gmt-8: &gmt-8
+  GMT_M0800:
+    :title: 'Pacific Standard Time, Los Angeles, Vancouver, B.C.'
+    :name: 'Etc/GMT+8'
+    :dst: false
+
+gmt-7: &gmt-7
+  GMT_M0700:
+    :title: 'Mountain Standard Time, British Columbia N.E., Denver'
+    :name: 'Etc/GMT+7'
+    :dst: false
+
+gmt-6: &gmt-6
+  GMT_M0600:
+    :title: 'Central Standard Time, Chicago, Guatamala, Mexico City'
+    :name: 'Etc/GMT+6'
+    :dst: false
+
+gmt-5: &gmt-5
+  GMT_M0500:
+    :title: 'Eastern Standard Time, Bogota, New York'
+    :name: 'Etc/GMT+5'
+    :dst: false
+
+gmt-4: &gmt-4
+  GMT_M0400:
+    :title: 'Atlantic Standard Time Halifax, Santiago'
+    :name: 'Etc/GMT+4'
+    :dst: false
+
+gmt-3: &gmt-3
+  GMT_M0300:
+    :title: 'Brazilia, Buenos Aires, Georgetown, Greenland'
+    :name: 'Etc/GMT+3'
+    :dst: false
+
+gmt-2: &gmt-2
+  GMT_M0200:
+    :title: 'Mid-Atlantic'
+    :name: 'Etc/GMT+2'
+    :dst: false
+
+gmt-1: &gmt-1
+  GMT_M0100:
+    :title: 'Azores, Cape Verde Is., Western Africa Time'
+    :name: 'Etc/GMT+1'
+    :dst: false
+
+gmt-0: &gmt-0
+  GMT_M0000:
+    :title: 'London, Iceland, Ireland, Morocco, Portugal'
+    :name: 'Etc/GMT+0'
+    :dst: false
+
+gmt1: &gmt1
+  GMT_P0100:
+    :title: 'Amsterdam, Berlin, Bern, Madrid, Paris, Rome'
+    :name: 'Etc/GMT-1'
+    :dst: false
+
+gmt2: &gmt2
+  GMT_P0200:
+    :title: 'Athens, Cairo, Cape Town, Finland, Greece, Israel'
+    :name: 'Etc/GMT-2'
+    :dst: false
+
+gmt3: &gmt3
+  GMT_P0300:
+    :title: 'Ankara, Aden, Baghdad, Beruit, Kuwait, Moscow'
+    :name: 'Etc/GMT-3'
+    :dst: false
+
+gmt4: &gmt4
+  GMT_P0400:
+    :title: 'Abu Dhabi, Baku, Kabul, Tehran, Tbilisi, Volgograd'
+    :name: 'Etc/GMT-4'
+    :dst: false
+
+gmt5: &gmt5
+  GMT_P0500:
+    :title: 'Calcutta, Colombo, Islamabad, Madras, New Dehli'
+    :name: 'Etc/GMT-5'
+    :dst: false
+
+gmt6: &gmt6
+  GMT_P0600:
+    :title: 'Almaty, Dhakar, Kathmandu, Colombo, Sri Lanka'
+    :name: 'Etc/GMT-6'
+    :dst: false
+
+gmt7: &gmt7
+  GMT_P0700:
+    :title: 'Bangkok, Hanoi, Jakarta, Phnom Penh, Australia'
+    :name: 'Etc/GMT-7'
+    :dst: false
+
+gmt8: &gmt8
+  GMT_P0800:
+    :title: 'Taipei, Beijing, Hong Kong, Singapore'
+    :name: 'Etc/GMT-8'
+    :dst: false
+
+gmt9: &gmt9
+  GMT_P0900:
+    :title: 'Seoul, Tokyo, Central Australia'
+    :name: 'Etc/GMT-9'
+    :dst: false
+
+gmt10: &gmt10
+  GMT_P1000:
+    :title: 'Brisbane, Canberra, Guam, Melbourne, Sydney'
+    :name: 'Etc/GMT-10'
+    :dst: false
+
+gmt11: &gmt11
+  GMT_P1100:
+    :title: 'Magadan, New Caledonia, Solomon Is.'
+    :name: 'Etc/GMT-11'
+    :dst: false
+
+gmt12: &gmt12
+  GMT_P1200:
+    :title: 'Auckland, Fiji, Kamchatka, Marshall, Wellington'
+    :name: 'Etc/GMT-12'
+    :dst: false
+
+default: &default
+  <<: *gmt-12
+  <<: *gmt-11
+  <<: *gmt-10
+  <<: *gmt-9
+  <<: *gmt-8
+  <<: *gmt-7
+  <<: *gmt-6
+  <<: *gmt-5
+  <<: *gmt-4
+  <<: *gmt-3
+  <<: *gmt-2
+  <<: *gmt-1
+  <<: *gmt-0
+  <<: *gmt1
+  <<: *gmt2
+  <<: *gmt3
+  <<: *gmt4
+  <<: *gmt5
+  <<: *gmt6
+  <<: *gmt7
+  <<: *gmt8
+  <<: *gmt9
+  <<: *gmt10
+  <<: *gmt11
+  <<: *gmt12
+
+development: *default
+
+test: *default
+
+staging: *default
+
+pre-production: *default
+
+production: *default

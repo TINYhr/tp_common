@@ -3,14 +3,7 @@ require 'spec_helper'
 RSpec.describe TpCommon::Timezones::Config do
   describe ".config" do
     context 'in rails apps' do
-      context 'rails version not support `config_for`'
-      context 'rails version support `config_for`' do
-        context 'rails app has NO config/timezones.yml'
-        context 'rails app has invalid config/timezones.yml'
-        context 'rails app has valid config/timezones.yml' do
-          it "behaves the same"
-        end
-      end
+      # Ref integration tests
     end
 
     context 'NOT rails apps' do
