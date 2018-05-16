@@ -141,25 +141,54 @@ RSpec.describe TpCommon::Timezones do
   describe '.local_to_utc' do
     subject { described_class.local_to_utc(test_time, zone_key) }
 
-    context "10 am GMT+7 time now" do
-      let(:test_time) { Time.new(2017, 12, 1, 10, 0, 0, "+07:00") }
-      let(:zone_key) { 'GMT_P0700' }
+    context 'in original timezone' do
+      let(:zone_key) { 'GMT_M0600' }
 
-      it { is_expected.to eq(Time.new(2017, 12, 1, 3, 0, 0, "-00:00"))}
+      context 'during DST time' do
+        let(:test_time) { Time.new(2017, 5, 1, 10, 0, 0, "-06:00") }
+
+        it { is_expected.to eq(Time.new(2017, 5, 1, 16, 0, 0, "-00:00"))}
+      end
+
+      context 'outside DST time' do
+        let(:test_time) { Time.new(2017, 12, 1, 10, 0, 0, "-06:00") }
+
+        it { is_expected.to eq(Time.new(2017, 12, 1, 16, 0, 0, "-00:00"))}
+      end
     end
 
-    context "10 am GMT time now" do
-      let(:test_time) { Time.new(2017, 12, 1, 10, 0, 0, "+00:00") }
-      let(:zone_key) { 'GMT_M0000' }
+    context 'in DST timezone' do
+      let(:zone_key) { 'GMT_M0600+2' }
 
-      it { is_expected.to eq(Time.new(2017, 12, 1, 10, 0, 0, "-00:00"))}
+      context 'during DST time' do
+        let(:test_time) { Time.new(2017, 5, 1, 10, 0, 0, "-06:00") }
+
+        context 'minus 1 hour' do
+          it { is_expected.to eq(Time.new(2017, 5, 1, 15, 0, 0, "-00:00")) }
+        end
+      end
+
+      context 'outside DST time' do
+        let(:test_time) { Time.new(2017, 12, 1, 10, 0, 0, "-06:00") }
+
+        it { is_expected.to eq(Time.new(2017, 12, 1, 16, 0, 0, "-00:00"))}
+      end
     end
 
-    context "10am GMT-7 time now" do
-      let(:test_time) { Time.new(2017, 12, 1, 10, 0, 0, "-07:00") }
-      let(:zone_key) { 'GMT_M0700' }
+    context 'in non-DST timezone' do
+      let(:zone_key) { 'GMT_M0600+1' }
 
-      it { is_expected.to eq(Time.new(2017, 12, 1, 17, 0, 0, "-00:00"))}
+      context 'during DST time' do
+        let(:test_time) { Time.new(2017, 5, 1, 10, 0, 0, "-06:00") }
+
+        it { is_expected.to eq(Time.new(2017, 5, 1, 16, 0, 0, "-00:00"))}
+      end
+
+      context 'outside DST time' do
+        let(:test_time) { Time.new(2017, 12, 1, 10, 0, 0, "-06:00") }
+
+        it { is_expected.to eq(Time.new(2017, 12, 1, 16, 0, 0, "-00:00"))}
+      end
     end
   end
 

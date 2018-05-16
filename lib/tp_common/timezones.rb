@@ -65,7 +65,8 @@ module TpCommon
     #
     def self.local_to_utc(time, zone)
       zone_value = LIST_ZONES[zone]
-      ActiveSupport::TimeZone.new(zone_value[:name]).local_to_utc(time)
+      (ActiveSupport::TimeZone.new(zone_value[:title]) ||
+        ActiveSupport::TimeZone.new(zone_value[:name])).local_to_utc(time)
     end
 
     # Opposite of #local_to_utc It conver a time to time in zone defined in LIST_ZONES
