@@ -61,6 +61,15 @@ $ bundle exec appraisal rails-5 rspec spec/integration/rails_custom_timezones_sp
 
 ```
 
+## Deploy
+
+1. Branch from master
+2. Bump version `/lib/tp_common/version.rb`
+3. Run `bundle && bundle exec appraisal install`
+4. Push to CI to run test
+5. Merge to `master`
+6. Pull and tag `master` new version
+7. Push tag
 
 ## Contributing
 
