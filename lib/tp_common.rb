@@ -16,3 +16,4 @@ end
 
 require "tp_common/timezones"
 require "tp_common/timezones/zone"
+require "tp_common/assets_loader"
