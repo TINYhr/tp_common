@@ -84,7 +84,7 @@ module TpCommon
     def [](asset_name)
       @manifest[asset_name].tap do |asset|
         if asset.nil?
-          raise Tp::AssetsLoader::AssetNotFound.new("Asset #{@package_name}/#{asset_name} is not found.")
+          raise AssetNotFound.new("Asset #{@package_name}/#{asset_name} is not found.")
         end
       end
     end
