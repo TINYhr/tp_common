@@ -8,11 +8,12 @@ module TpCommon
         if defined?(::Rails::Railtie)
           begin
             TpCommon::Timezones.const_set("LIST_ZONES", Rails.application.config_for(:timezones))
+            puts "[TpCommon::Timezones::Config] Message-3: Use custom timezones in project config/timezones.yml"
             return
           rescue NameError, NoMethodError
-            puts "Couldn't load Rails or config methods. Use default."
+            puts "[TpCommon::Timezones::Config] Message-1: Use default timezones in tp_common/timezones/config/timezones.yml"
           rescue StandardError
-            puts "Couldn't load file config/timezones.yml. Use default."
+            puts "[TpCommon::Timezones::Config] Message-2: Use default timezones in tp_common/timezones/config/timezones.yml"
           end
         end
 
