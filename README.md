@@ -5,6 +5,12 @@
 
 This gem contains common libraries which shared between projects used in TINYpulse.
 
+Currently, we have:
+
+1. Timezone helpers
+2. Asset loader
+3. File storage
+
 ## Rails versions
 
 From v0.2.0 `tp_common` support only rails > 4. Mostly on ActiveSupport DateTime functions and `Rails.config_for` method.
