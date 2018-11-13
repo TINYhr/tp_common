@@ -37,4 +37,9 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "tzinfo", '~> 1.2', '>= 1.2.0'
   spec.add_runtime_dependency "activesupport", '<= 5.2', '>= 4.2.0'
+  spec.add_runtime_dependency 'fog-aws', '~> 2.0'
+  # fog-aws need a mime-type tool
+  spec.add_runtime_dependency 'mime-types', '~> 3.2'
+
+  spec.add_runtime_dependency 'aws-sdk-s3', '~> 1.19'
 end
