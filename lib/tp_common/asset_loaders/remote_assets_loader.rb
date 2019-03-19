@@ -18,6 +18,8 @@ module TpCommon
     # ```
     # TpCommon::AssetLoaders::RemoteAssetsLoader.configure do |config|
     #   config.cdn = 'https://other.hotter.cdn'
+    #   # And for development mode, add more
+    #   config.dev_cdn = 'http://app.lvh.me:3001'
     # end
     # # Load a package. This is required.
     # TpCommon::AssetLoaders::RemoteAssetsLoader.load(:'any-spa', 'v1.0.0')
@@ -29,7 +31,7 @@ module TpCommon
     # ```
     class RemoteAssetsLoader
       DEFAULT_CDN = 'https://cdn.tinypulse.com/spa'
-      LoaderConfiguration = Struct.new(:cdn, :package_path_provider)
+      LoaderConfiguration = Struct.new(:cdn, :dev_cdn, :package_path_provider)
 
       class << self
         # Configure RemoteAssetsLoader, for now, only :cdn is supported
@@ -41,7 +43,7 @@ module TpCommon
         def configure
           yield(config)
 
-          config.package_path_provider = TpCommon::AssetLoaders::ProviderClass.new(config.cdn)
+          config.package_path_provider = TpCommon::AssetLoaders::ProviderClass.new(config.cdn, config.dev_cdn)
         end
 
         # Load a package (SPA) with specific version to use.
@@ -99,8 +101,6 @@ module TpCommon
       def initialize(package_name, version)
         @package_name = package_name
         @version = version
-
-        @cached_assets = Hash.new { |hash, key| hash[key] = RemoteAssetsLoader.asset_url(@package_name, @version, key.to_s) }
       end
 
       def [](asset_name)
@@ -108,7 +108,7 @@ module TpCommon
         # NOTE: [AV] It's secure to check this asset url exists by Net::HTTP then try more than 1 cdn.
         #       but DONT DO IT. Using unavailable spa version/cdn is a SERIOUS problem need to solve, not auto-recovery
         #       beside, this url will be called every page hit, so any milisecond are counted.
-        @cached_assets[asset_name]
+        RemoteAssetsLoader.asset_url(@package_name, @version, asset_name)
       end
     end
   end

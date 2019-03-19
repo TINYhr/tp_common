@@ -4,15 +4,12 @@ module TpCommon
   module AssetLoaders
     module PackagePathProviders
       class Development < Production
-        DEVELOPMENT_CDN = 'http://localhost:3001'
-
         def asset_url(package_name, version, asset)
-          @development ||= head("#{DEVELOPMENT_CDN}/_ping")
-          if @development
-            return "#{cdn(package_name, version)}/#{asset}"
+          if !head("#{@dev_cdn}/#{package_name}/_ping")
+            return super(package_name, version, asset)
           end
 
-          super(package_name, version, asset)
+          "#{@dev_cdn}/#{package_name}/#{asset}"
         end
 
         private
