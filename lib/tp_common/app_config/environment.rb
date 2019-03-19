@@ -39,6 +39,11 @@ module TpCommon
           @app_config[key]
         end
 
+        # Clear @app_config, use for testing only
+        def clear!
+          @app_config = nil
+        end
+
         private
 
         def load_config
@@ -59,11 +64,7 @@ module TpCommon
         end
 
         def load_yaml_config
-          file_path = if defined?(Rails)
-            File.join(Rails.root,'config/app_config.yml')
-          else
-            File.join(File.dirname(__FILE__),'app_config.yml')
-          end
+          file_path = File.join(project_root, 'config', 'app_config.yml')
 
           yaml = Pathname.new(file_path)
           if yaml.exist?
@@ -87,6 +88,18 @@ module TpCommon
               [(parent + [key]).join('.'), value]
             end
           end
+        end
+
+        def project_root
+          if defined?(Rails)
+            return Rails.root
+          end
+
+          if defined?(Bundler)
+            return Bundler.root
+          end
+
+          Dir.pwd
         end
       end
     end
