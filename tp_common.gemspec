@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock"
 
   spec.add_runtime_dependency "tzinfo", '~> 1.2', '>= 1.2.0'
-  spec.add_runtime_dependency "activesupport", '< 6.0', '>= 4.2.0'
+  spec.add_runtime_dependency "activesupport", '< 7.0', '>= 4.2.0'
   spec.add_runtime_dependency 'fog-aws', '~> 2.0'
   # fog-aws need a mime-type tool
   spec.add_runtime_dependency 'mime-types', '~> 3.2'
