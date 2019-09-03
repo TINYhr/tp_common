@@ -1,0 +1,438 @@
+gmt-12: &gmt-12
+  GMT_M1200:
+    - 'Etc/GMT+12'
+    - 'GMT-12'
+
+gmt-11: &gmt-11
+  GMT_M1100:
+    - 'Etc/GMT+11'
+    - 'GMT-11'
+  GMT_M1100+1:
+    - 'American Samoa'
+  GMT_M1100+2:
+    - 'International Date Line West'
+  GMT_M1100+3:
+    - 'Midway Island'
+
+gmt-10: &gmt-10
+  GMT_M1000:
+    - 'Etc/GMT+10'
+    - 'GMT-10'
+  GMT_M1000+1:
+    - 'Hawaii'
+
+gmt-9: &gmt-9
+  GMT_M0900:
+    - 'Etc/GMT+9'
+    - 'GMT-9'
+  GMT_M0900+1:
+    - 'Alaska'
+
+gmt-8: &gmt-8
+  GMT_M0800:
+    - 'Etc/GMT+8'
+    - 'GMT-8'
+  GMT_M0800+1:
+    - 'Pacific Time (US & Canada)'
+    - 'Pacific Time'
+    - PST
+    - PDT
+    - PT
+  GMT_M0800+2:
+    - 'Tijuana'
+
+gmt-7: &gmt-7
+  GMT_M0700:
+    - 'Etc/GMT+7'
+    - 'GMT-7'
+  GMT_M0700+1:
+    - 'Arizona'
+  GMT_M0700+2:
+    - 'Chihuahua'
+  GMT_M0700+3:
+    - 'Mazatlan'
+  GMT_M0700+4:
+    - 'Mountain Time (US & Canada)'
+    - 'Mountain Time'
+    - MST
+    - MDT
+    - MT
+
+gmt-6: &gmt-6
+  GMT_M0600:
+    - 'Etc/GMT+6'
+    - 'GMT-6'
+  GMT_M0600+1:
+    - 'Central America'
+  GMT_M0600+2:
+    - 'Central Time (US & Canada)'
+    - 'Central Time'
+    - CST
+    - CDT
+    - CT
+  GMT_M0600+3:
+    - 'Guadalajara'
+  GMT_M0600+4:
+    - 'Mexico City'
+  GMT_M0600+5:
+    - 'Monterrey'
+  GMT_M0600+6:
+    - 'Saskatchewan'
+
+gmt-5: &gmt-5
+  GMT_M0500:
+    - 'Etc/GMT+5'
+    - 'GMT-5'
+  GMT_M0500+1:
+    - 'Bogota'
+  GMT_M0500+2:
+    - 'Eastern Time (US & Canada)'
+    - 'Eastern Time'
+    - EST
+    - EDT
+    - ET
+  GMT_M0500+3:
+    - 'Indiana (East)'
+    - 'Indiana'
+  GMT_M0500+4:
+    - 'Lima'
+  GMT_M0500+5:
+    - 'Quito'
+
+gmt-4: &gmt-4
+  GMT_M0400:
+    - 'Etc/GMT+4'
+    - 'GMT-4'
+  GMT_M0400+1:
+    - 'Atlantic Time (Canada)'
+    - 'Atlantic Time'
+  GMT_M0400+2:
+    - 'Caracas'
+  GMT_M0400+3:
+    - 'Georgetown'
+  GMT_M0400+4:
+    - 'La Paz'
+  GMT_M0400+5:
+    - 'Santiago'
+
+gmt-3: &gmt-3
+  GMT_M0300:
+    - 'Etc/GMT+3'
+    - 'GMT-3'
+  GMT_M0300+1:
+    - 'Brasilia'
+  GMT_M0300+2:
+    - 'Buenos Aires'
+  GMT_M0300+3:
+    - 'Greenland'
+  GMT_M0300+4:
+    - 'Montevideo'
+
+gmt-2: &gmt-2
+  GMT_M0200:
+    - 'Etc/GMT+2'
+    - 'GMT-2'
+  GMT_M0200+1:
+    - 'Mid-Atlantic'
+
+gmt-1: &gmt-1
+  GMT_M0100:
+    - 'Etc/GMT+1'
+    - 'GMT-1'
+  GMT_M0100+1:
+    - 'Azores'
+  GMT_M0100+2:
+    - 'Cape Verde Is.'
+    - 'Cape Verde'
+
+gmt-0: &gmt-0
+  GMT_M0000:
+    - 'Etc/GMT+0'
+    - 'GMT-0'
+  GMT_M0000+1:
+    - 'Casablanca'
+  GMT_M0000+2:
+    - 'Dublin'
+  GMT_M0000+3:
+    - 'Edinburgh'
+  GMT_M0000+4:
+    - 'Lisbon'
+  GMT_M0000+5:
+    - 'London'
+  GMT_M0000+6:
+    - 'Monrovia'
+  GMT_M0000+7:
+    - 'UTC'
+
+gmt1: &gmt1
+  GMT_P0100:
+    - 'Etc/GMT-1'
+    - 'GMT+1'
+  GMT_P0100+1:
+    - 'Amsterdam'
+  GMT_P0100+2:
+    - 'Belgrade'
+  GMT_P0100+3:
+    - 'Berlin'
+  GMT_P0100+4:
+    - 'Bern'
+  GMT_P0100+5:
+    - 'Bratislava'
+  GMT_P0100+6:
+    - 'Brussels'
+  GMT_P0100+7:
+    - 'Budapest'
+  GMT_P0100+8:
+    - 'Copenhagen'
+  GMT_P0100+9:
+    - 'Ljubljana'
+  GMT_P0100+10:
+    - 'Madrid'
+  GMT_P0100+11:
+    - 'Paris'
+  GMT_P0100+12:
+    - 'Prague'
+  GMT_P0100+13:
+    - 'Rome'
+  GMT_P0100+14:
+    - 'Sarajevo'
+  GMT_P0100+15:
+    - 'Skopje'
+  GMT_P0100+16:
+    - 'Stockholm'
+  GMT_P0100+17:
+    - 'Vienna'
+  GMT_P0100+18:
+    - 'Warsaw'
+  GMT_P0100+19:
+    - 'West Central Africa'
+  GMT_P0100+20:
+    - 'Zagreb'
+
+gmt2: &gmt2
+  GMT_P0200:
+    - 'Etc/GMT-2'
+    - 'GMT+2'
+  GMT_P0200+1:
+    - 'Athens'
+  GMT_P0200+2:
+    - 'Bucharest'
+  GMT_P0200+3:
+    - 'Cairo'
+  GMT_P0200+4:
+    - 'Harare'
+  GMT_P0200+5:
+    - 'Helsinki'
+  GMT_P0200+6:
+    - 'Jerusalem'
+  GMT_P0200+7:
+    - 'Kaliningrad'
+  GMT_P0200+8:
+    - 'Kyiv'
+  GMT_P0200+9:
+    - 'Pretoria'
+  GMT_P0200+10:
+    - 'Riga'
+  GMT_P0200+11:
+    - 'Sofia'
+  GMT_P0200+12:
+    - 'Tallinn'
+  GMT_P0200+13:
+    - 'Vilnius'
+
+gmt3: &gmt3
+  GMT_P0300:
+    - 'Etc/GMT-3'
+    - 'GMT+3'
+  GMT_P0300+1:
+    - 'Baghdad'
+  GMT_P0300+2:
+    - 'Istanbul'
+  GMT_P0300+3:
+    - 'Kuwait'
+  GMT_P0300+4:
+    - 'Minsk'
+  GMT_P0300+5:
+    - 'Moscow'
+  GMT_P0300+6:
+    - 'Nairobi'
+  GMT_P0300+7:
+    - 'Riyadh'
+  GMT_P0300+8:
+    - 'St. Petersburg'
+  GMT_P0300+9:
+    - 'Volgograd'
+
+gmt4: &gmt4
+  GMT_P0400:
+    - 'Etc/GMT-4'
+    - 'GMT+4'
+  GMT_P0400+1:
+    - 'Abu Dhabi'
+  GMT_P0400+2:
+    - 'Baku'
+  GMT_P0400+3:
+    - 'Muscat'
+  GMT_P0400+4:
+    - 'Samara'
+  GMT_P0400+5:
+    - 'Tbilisi'
+  GMT_P0400+6:
+    - 'Yerevan'
+
+gmt5: &gmt5
+  GMT_P0500:
+    - 'Etc/GMT-5'
+    - 'GMT+5'
+    - 'GMT+5.5'
+  GMT_P0500+1:
+    - 'Ekaterinburg'
+  GMT_P0500+2:
+    - 'Islamabad'
+  GMT_P0500+3:
+    - 'Karachi'
+  GMT_P0500+4:
+    - 'Tashkent'
+
+gmt6: &gmt6
+  GMT_P0600:
+    - 'Etc/GMT-6'
+    - 'GMT+6'
+  GMT_P0600+1:
+    - 'Almaty'
+  GMT_P0600+2:
+    - 'Astana'
+  GMT_P0600+3:
+    - 'Dhaka'
+  GMT_P0600+4:
+    - 'Urumqi'
+
+gmt7: &gmt7
+  GMT_P0700:
+    - 'Etc/GMT-7'
+    - 'GMT+7'
+  GMT_P0700+1:
+    - 'Bangkok'
+  GMT_P0700+2:
+    - 'Hanoi'
+  GMT_P0700+3:
+    - 'Jakarta'
+  GMT_P0700+4:
+    - 'Krasnoyarsk'
+  GMT_P0700+5:
+    - 'Novosibirsk'
+
+gmt8: &gmt8
+  GMT_P0800:
+    - 'Etc/GMT-8'
+    - 'GMT+8'
+  GMT_P0800+1:
+    - 'Beijing'
+  GMT_P0800+2:
+    - 'Chongqing'
+  GMT_P0800+3:
+    - 'Hong Kong'
+  GMT_P0800+4:
+    - 'Irkutsk'
+  GMT_P0800+5:
+    - 'Kuala Lumpur'
+  GMT_P0800+6:
+    - 'Perth'
+  GMT_P0800+7:
+    - 'Singapore'
+  GMT_P0800+8:
+    - 'Taipei'
+  GMT_P0800+9:
+    - 'Ulaanbaatar'
+
+gmt9: &gmt9
+  GMT_P0900:
+    - 'Etc/GMT-9'
+    - 'GMT+9'
+  GMT_P0900+1:
+    - 'Osaka'
+  GMT_P0900+2:
+    - 'Sapporo'
+  GMT_P0900+3:
+    - 'Seoul'
+  GMT_P0900+4:
+    - 'Tokyo'
+  GMT_P0900+5:
+    - 'Yakutsk'
+
+gmt10: &gmt10
+  GMT_P1000:
+    - 'Etc/GMT-10'
+    - 'GMT+10'
+  GMT_P1000+1:
+    - 'Brisbane'
+  GMT_P1000+2:
+    - 'Canberra'
+  GMT_P1000+3:
+    - 'Guam'
+  GMT_P1000+4:
+    - 'Hobart'
+  GMT_P1000+5:
+    - 'Melbourne'
+  GMT_P1000+6:
+    - 'Port Moresby'
+  GMT_P1000+7:
+    - 'Sydney'
+  GMT_P1000+8:
+    - 'Vladivostok'
+
+gmt11: &gmt11
+  GMT_P1100:
+    - 'Etc/GMT-11'
+    - 'GMT+11'
+  GMT_P1100+1:
+    - 'Magadan'
+  GMT_P1100+2:
+    - 'New Caledonia'
+  GMT_P1100+3:
+    - 'Solomon Is.'
+  GMT_P1100+4:
+    - 'Srednekolymsk'
+
+gmt12: &gmt12
+  GMT_P1200:
+    - 'Etc/GMT-12'
+    - 'GMT+12'
+  GMT_P1200+1:
+    - 'Auckland'
+  GMT_P1200+2:
+    - 'Fiji'
+  GMT_P1200+3:
+    - 'Kamchatka'
+  GMT_P1200+4:
+    - 'Marshall Is.'
+    - 'Marshall'
+  GMT_P1200+5:
+    - 'Wellington'
+
+all_zones: &default
+  <<: *gmt-12
+  <<: *gmt-11
+  <<: *gmt-10
+  <<: *gmt-9
+  <<: *gmt-8
+  <<: *gmt-7
+  <<: *gmt-6
+  <<: *gmt-5
+  <<: *gmt-4
+  <<: *gmt-3
+  <<: *gmt-2
+  <<: *gmt-1
+  <<: *gmt-0
+  <<: *gmt1
+  <<: *gmt2
+  <<: *gmt3
+  <<: *gmt4
+  <<: *gmt5
+  <<: *gmt6
+  <<: *gmt7
+  <<: *gmt8
+  <<: *gmt9
+  <<: *gmt10
+  <<: *gmt11
+  <<: *gmt12
