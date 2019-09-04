@@ -35,10 +35,10 @@ RSpec.describe TpCommon::Timezones::Config do
         end
       end
 
-      it 'has 204 reversed look up as default' do
+      it 'has 344 reversed look up as default' do
         described_class.config
 
-        expect(TpCommon::Timezones::REVERSED_LIST_ZONES.count).to eq(204)
+        expect(TpCommon::Timezones::REVERSED_LIST_ZONES.count).to eq(344)
       end
     end
   end

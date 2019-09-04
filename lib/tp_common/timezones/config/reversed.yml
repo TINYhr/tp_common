@@ -9,10 +9,13 @@ gmt-11: &gmt-11
     - 'GMT-11'
   GMT_M1100+1:
     - 'American Samoa'
+    - 'American Samoa GMT-11'
   GMT_M1100+2:
     - 'International Date Line West'
+    - 'International Date Line West GMT-11'
   GMT_M1100+3:
     - 'Midway Island'
+    - 'Midway Island GMT-11'
 
 gmt-10: &gmt-10
   GMT_M1000:
@@ -20,6 +23,7 @@ gmt-10: &gmt-10
     - 'GMT-10'
   GMT_M1000+1:
     - 'Hawaii'
+    - 'Hawaii GMT-10'
 
 gmt-9: &gmt-9
   GMT_M0900:
@@ -27,6 +31,7 @@ gmt-9: &gmt-9
     - 'GMT-9'
   GMT_M0900+1:
     - 'Alaska'
+    - 'Alaska GMT-9'
 
 gmt-8: &gmt-8
   GMT_M0800:
@@ -34,12 +39,16 @@ gmt-8: &gmt-8
     - 'GMT-8'
   GMT_M0800+1:
     - 'Pacific Time (US & Canada)'
+    - 'Pacific Time (US & Canada) GMT-8'
     - 'Pacific Time'
+    - 'Pacific Time GMT-8'
     - PST
+    - PST GMT-8
     - PDT
-    - PT
+    - PDT GMT-8
   GMT_M0800+2:
     - 'Tijuana'
+    - 'Tijuana GMT-8'
 
 gmt-7: &gmt-7
   GMT_M0700:
@@ -47,16 +56,22 @@ gmt-7: &gmt-7
     - 'GMT-7'
   GMT_M0700+1:
     - 'Arizona'
+    - 'Arizona GMT-7'
   GMT_M0700+2:
     - 'Chihuahua'
+    - 'Chihuahua GMT-7'
   GMT_M0700+3:
     - 'Mazatlan'
+    - 'Mazatlan GMT-7'
   GMT_M0700+4:
     - 'Mountain Time (US & Canada)'
+    - 'Mountain Time (US & Canada) GMT-7'
     - 'Mountain Time'
+    - 'Mountain Time GMT-7'
     - MST
+    - MST GMT-7
     - MDT
-    - MT
+    - MDT GMT-7
 
 gmt-6: &gmt-6
   GMT_M0600:
@@ -64,20 +79,28 @@ gmt-6: &gmt-6
     - 'GMT-6'
   GMT_M0600+1:
     - 'Central America'
+    - 'Central America GMT-6'
   GMT_M0600+2:
     - 'Central Time (US & Canada)'
+    - 'Central Time (US & Canada) GMT-6'
     - 'Central Time'
+    - 'Central Time GMT-6'
     - CST
+    - CST GMT-6
     - CDT
-    - CT
+    - CDT GMT-6
   GMT_M0600+3:
     - 'Guadalajara'
+    - 'Guadalajara GMT-6'
   GMT_M0600+4:
     - 'Mexico City'
+    - 'Mexico City GMT-6'
   GMT_M0600+5:
     - 'Monterrey'
+    - 'Monterrey GMT-6'
   GMT_M0600+6:
     - 'Saskatchewan'
+    - 'Saskatchewan GMT-6'
 
 gmt-5: &gmt-5
   GMT_M0500:
@@ -85,19 +108,27 @@ gmt-5: &gmt-5
     - 'GMT-5'
   GMT_M0500+1:
     - 'Bogota'
+    - 'Bogota GMT-5'
   GMT_M0500+2:
     - 'Eastern Time (US & Canada)'
+    - 'Eastern Time (US & Canada) GMT-5'
     - 'Eastern Time'
+    - 'Eastern Time GMT-5'
     - EST
+    - EST GMT-5
     - EDT
-    - ET
+    - EDT GMT-5
   GMT_M0500+3:
     - 'Indiana (East)'
+    - 'Indiana (East) GMT-5'
     - 'Indiana'
+    - 'Indiana GMT-5'
   GMT_M0500+4:
     - 'Lima'
+    - 'Lima GMT-5'
   GMT_M0500+5:
     - 'Quito'
+    - 'Quito GMT-5'
 
 gmt-4: &gmt-4
   GMT_M0400:
@@ -105,15 +136,21 @@ gmt-4: &gmt-4
     - 'GMT-4'
   GMT_M0400+1:
     - 'Atlantic Time (Canada)'
+    - 'Atlantic Time (Canada) GMT-4'
     - 'Atlantic Time'
+    - 'Atlantic Time GMT-4'
   GMT_M0400+2:
     - 'Caracas'
+    - 'Caracas GMT-4'
   GMT_M0400+3:
     - 'Georgetown'
+    - 'Georgetown GMT-4'
   GMT_M0400+4:
     - 'La Paz'
+    - 'La Paz GMT-4'
   GMT_M0400+5:
     - 'Santiago'
+    - 'Santiago GMT-4'
 
 gmt-3: &gmt-3
   GMT_M0300:
@@ -121,12 +158,16 @@ gmt-3: &gmt-3
     - 'GMT-3'
   GMT_M0300+1:
     - 'Brasilia'
+    - 'Brasilia GMT-3'
   GMT_M0300+2:
     - 'Buenos Aires'
+    - 'Buenos Aires GMT-3'
   GMT_M0300+3:
     - 'Greenland'
+    - 'Greenland GMT-3'
   GMT_M0300+4:
     - 'Montevideo'
+    - 'Montevideo GMT-3'
 
 gmt-2: &gmt-2
   GMT_M0200:
@@ -134,6 +175,7 @@ gmt-2: &gmt-2
     - 'GMT-2'
   GMT_M0200+1:
     - 'Mid-Atlantic'
+    - 'Mid-Atlantic GMT-2'
 
 gmt-1: &gmt-1
   GMT_M0100:
@@ -141,9 +183,10 @@ gmt-1: &gmt-1
     - 'GMT-1'
   GMT_M0100+1:
     - 'Azores'
+    - 'Azores GMT-1'
   GMT_M0100+2:
     - 'Cape Verde Is.'
-    - 'Cape Verde'
+    - 'Cape Verde Is. GMT-1'
 
 gmt-0: &gmt-0
   GMT_M0000:
@@ -151,16 +194,22 @@ gmt-0: &gmt-0
     - 'GMT-0'
   GMT_M0000+1:
     - 'Casablanca'
+    - 'Casablanca GMT-0'
   GMT_M0000+2:
     - 'Dublin'
+    - 'Dublin GMT-0'
   GMT_M0000+3:
     - 'Edinburgh'
+    - 'Edinburgh GMT-0'
   GMT_M0000+4:
     - 'Lisbon'
+    - 'Lisbon GMT-0'
   GMT_M0000+5:
     - 'London'
+    - 'London GMT-0'
   GMT_M0000+6:
     - 'Monrovia'
+    - 'Monrovia GMT-0'
   GMT_M0000+7:
     - 'UTC'
 
@@ -170,44 +219,64 @@ gmt1: &gmt1
     - 'GMT+1'
   GMT_P0100+1:
     - 'Amsterdam'
+    - 'Amsterdam GMT+1'
   GMT_P0100+2:
     - 'Belgrade'
+    - 'Belgrade GMT+1'
   GMT_P0100+3:
     - 'Berlin'
+    - 'Berlin GMT+1'
   GMT_P0100+4:
     - 'Bern'
+    - 'Bern GMT+1'
   GMT_P0100+5:
     - 'Bratislava'
+    - 'Bratislava GMT+1'
   GMT_P0100+6:
     - 'Brussels'
+    - 'Brussels GMT+1'
   GMT_P0100+7:
     - 'Budapest'
+    - 'Budapest GMT+1'
   GMT_P0100+8:
     - 'Copenhagen'
+    - 'Copenhagen GMT+1'
   GMT_P0100+9:
     - 'Ljubljana'
+    - 'Ljubljana GMT+1'
   GMT_P0100+10:
     - 'Madrid'
+    - 'Madrid GMT+1'
   GMT_P0100+11:
     - 'Paris'
+    - 'Paris GMT+1'
   GMT_P0100+12:
     - 'Prague'
+    - 'Prague GMT+1'
   GMT_P0100+13:
     - 'Rome'
+    - 'Rome GMT+1'
   GMT_P0100+14:
     - 'Sarajevo'
+    - 'Sarajevo GMT+1'
   GMT_P0100+15:
     - 'Skopje'
+    - 'Skopje GMT+1'
   GMT_P0100+16:
     - 'Stockholm'
+    - 'Stockholm GMT+1'
   GMT_P0100+17:
     - 'Vienna'
+    - 'Vienna GMT+1'
   GMT_P0100+18:
     - 'Warsaw'
+    - 'Warsaw GMT+1'
   GMT_P0100+19:
     - 'West Central Africa'
+    - 'West Central Africa GMT+1'
   GMT_P0100+20:
     - 'Zagreb'
+    - 'Zagreb GMT+1'
 
 gmt2: &gmt2
   GMT_P0200:
@@ -215,30 +284,43 @@ gmt2: &gmt2
     - 'GMT+2'
   GMT_P0200+1:
     - 'Athens'
+    - 'Athens GMT+2'
   GMT_P0200+2:
     - 'Bucharest'
+    - 'Bucharest GMT+2'
   GMT_P0200+3:
     - 'Cairo'
+    - 'Cairo GMT+2'
   GMT_P0200+4:
     - 'Harare'
+    - 'Harare GMT+2'
   GMT_P0200+5:
     - 'Helsinki'
+    - 'Helsinki GMT+2'
   GMT_P0200+6:
     - 'Jerusalem'
+    - 'Jerusalem GMT+2'
   GMT_P0200+7:
     - 'Kaliningrad'
+    - 'Kaliningrad GMT+2'
   GMT_P0200+8:
     - 'Kyiv'
+    - 'Kyiv GMT+2'
   GMT_P0200+9:
     - 'Pretoria'
+    - 'Pretoria GMT+2'
   GMT_P0200+10:
     - 'Riga'
+    - 'Riga GMT+2'
   GMT_P0200+11:
     - 'Sofia'
+    - 'Sofia GMT+2'
   GMT_P0200+12:
     - 'Tallinn'
+    - 'Tallinn GMT+2'
   GMT_P0200+13:
     - 'Vilnius'
+    - 'Vilnius GMT+2'
 
 gmt3: &gmt3
   GMT_P0300:
@@ -246,22 +328,31 @@ gmt3: &gmt3
     - 'GMT+3'
   GMT_P0300+1:
     - 'Baghdad'
+    - 'Baghdad GMT+3'
   GMT_P0300+2:
     - 'Istanbul'
+    - 'Istanbul GMT+3'
   GMT_P0300+3:
     - 'Kuwait'
+    - 'Kuwait GMT+3'
   GMT_P0300+4:
     - 'Minsk'
+    - 'Minsk GMT+3'
   GMT_P0300+5:
     - 'Moscow'
+    - 'Moscow GMT+3'
   GMT_P0300+6:
     - 'Nairobi'
+    - 'Nairobi GMT+3'
   GMT_P0300+7:
     - 'Riyadh'
+    - 'Riyadh GMT+3'
   GMT_P0300+8:
     - 'St. Petersburg'
+    - 'St. Petersburg GMT+3'
   GMT_P0300+9:
     - 'Volgograd'
+    - 'Volgograd GMT+3'
 
 gmt4: &gmt4
   GMT_P0400:
@@ -269,16 +360,22 @@ gmt4: &gmt4
     - 'GMT+4'
   GMT_P0400+1:
     - 'Abu Dhabi'
+    - 'Abu Dhabi GMT+4'
   GMT_P0400+2:
     - 'Baku'
+    - 'Baku GMT+4'
   GMT_P0400+3:
     - 'Muscat'
+    - 'Muscat GMT+4'
   GMT_P0400+4:
     - 'Samara'
+    - 'Samara GMT+4'
   GMT_P0400+5:
     - 'Tbilisi'
+    - 'Tbilisi GMT+4'
   GMT_P0400+6:
     - 'Yerevan'
+    - 'Yerevan GMT+4'
 
 gmt5: &gmt5
   GMT_P0500:
@@ -287,12 +384,16 @@ gmt5: &gmt5
     - 'GMT+5.5'
   GMT_P0500+1:
     - 'Ekaterinburg'
+    - 'Ekaterinburg GMT+5'
   GMT_P0500+2:
     - 'Islamabad'
+    - 'Islamabad GMT+5'
   GMT_P0500+3:
     - 'Karachi'
+    - 'Karachi GMT+5'
   GMT_P0500+4:
     - 'Tashkent'
+    - 'Tashkent GMT+5'
 
 gmt6: &gmt6
   GMT_P0600:
@@ -300,12 +401,16 @@ gmt6: &gmt6
     - 'GMT+6'
   GMT_P0600+1:
     - 'Almaty'
+    - 'Almaty GMT+6'
   GMT_P0600+2:
     - 'Astana'
+    - 'Astana GMT+6'
   GMT_P0600+3:
     - 'Dhaka'
+    - 'Dhaka GMT+6'
   GMT_P0600+4:
     - 'Urumqi'
+    - 'Urumqi GMT+6'
 
 gmt7: &gmt7
   GMT_P0700:
@@ -313,14 +418,19 @@ gmt7: &gmt7
     - 'GMT+7'
   GMT_P0700+1:
     - 'Bangkok'
+    - 'Bangkok GMT+7'
   GMT_P0700+2:
     - 'Hanoi'
+    - 'Hanoi GMT+7'
   GMT_P0700+3:
     - 'Jakarta'
+    - 'Jakarta GMT+7'
   GMT_P0700+4:
     - 'Krasnoyarsk'
+    - 'Krasnoyarsk GMT+7'
   GMT_P0700+5:
     - 'Novosibirsk'
+    - 'Novosibirsk GMT+7'
 
 gmt8: &gmt8
   GMT_P0800:
@@ -328,22 +438,31 @@ gmt8: &gmt8
     - 'GMT+8'
   GMT_P0800+1:
     - 'Beijing'
+    - 'Beijing GMT+8'
   GMT_P0800+2:
     - 'Chongqing'
+    - 'Chongqing GMT+8'
   GMT_P0800+3:
     - 'Hong Kong'
+    - 'Hong Kong GMT+8'
   GMT_P0800+4:
     - 'Irkutsk'
+    - 'Irkutsk GMT+8'
   GMT_P0800+5:
     - 'Kuala Lumpur'
+    - 'Kuala Lumpur GMT+8'
   GMT_P0800+6:
     - 'Perth'
+    - 'Perth GMT+8'
   GMT_P0800+7:
     - 'Singapore'
+    - 'Singapore GMT+8'
   GMT_P0800+8:
     - 'Taipei'
+    - 'Taipei GMT+8'
   GMT_P0800+9:
     - 'Ulaanbaatar'
+    - 'Ulaanbaatar GMT+8'
 
 gmt9: &gmt9
   GMT_P0900:
@@ -351,14 +470,19 @@ gmt9: &gmt9
     - 'GMT+9'
   GMT_P0900+1:
     - 'Osaka'
+    - 'Osaka GMT+9'
   GMT_P0900+2:
     - 'Sapporo'
+    - 'Sapporo GMT+9'
   GMT_P0900+3:
     - 'Seoul'
+    - 'Seoul GMT+9'
   GMT_P0900+4:
     - 'Tokyo'
+    - 'Tokyo GMT+9'
   GMT_P0900+5:
     - 'Yakutsk'
+    - 'Yakutsk GMT+9'
 
 gmt10: &gmt10
   GMT_P1000:
@@ -366,20 +490,28 @@ gmt10: &gmt10
     - 'GMT+10'
   GMT_P1000+1:
     - 'Brisbane'
+    - 'Brisbane GMT+10'
   GMT_P1000+2:
     - 'Canberra'
+    - 'Canberra GMT+10'
   GMT_P1000+3:
     - 'Guam'
+    - 'Guam GMT+10'
   GMT_P1000+4:
     - 'Hobart'
+    - 'Hobart GMT+10'
   GMT_P1000+5:
     - 'Melbourne'
+    - 'Melbourne GMT+10'
   GMT_P1000+6:
     - 'Port Moresby'
+    - 'Port Moresby GMT+10'
   GMT_P1000+7:
     - 'Sydney'
+    - 'Sydney GMT+10'
   GMT_P1000+8:
     - 'Vladivostok'
+    - 'Vladivostok GMT+10'
 
 gmt11: &gmt11
   GMT_P1100:
@@ -387,12 +519,16 @@ gmt11: &gmt11
     - 'GMT+11'
   GMT_P1100+1:
     - 'Magadan'
+    - 'Magadan GMT+11'
   GMT_P1100+2:
     - 'New Caledonia'
+    - 'New Caledonia GMT+11'
   GMT_P1100+3:
     - 'Solomon Is.'
+    - 'Solomon Is. GMT+11'
   GMT_P1100+4:
     - 'Srednekolymsk'
+    - 'Srednekolymsk GMT+11'
 
 gmt12: &gmt12
   GMT_P1200:
@@ -400,15 +536,19 @@ gmt12: &gmt12
     - 'GMT+12'
   GMT_P1200+1:
     - 'Auckland'
+    - 'Auckland GMT+12'
   GMT_P1200+2:
     - 'Fiji'
+    - 'Fiji GMT+12'
   GMT_P1200+3:
     - 'Kamchatka'
+    - 'Kamchatka GMT+12'
   GMT_P1200+4:
     - 'Marshall Is.'
-    - 'Marshall'
+    - 'Marshall Is. GMT+12'
   GMT_P1200+5:
     - 'Wellington'
+    - 'Wellington GMT+12'
 
 all_zones: &default
   <<: *gmt-12
