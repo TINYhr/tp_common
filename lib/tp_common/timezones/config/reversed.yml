@@ -191,7 +191,9 @@ gmt-1: &gmt-1
 gmt-0: &gmt-0
   GMT_M0000:
     - 'Etc/GMT+0'
+    - 'Etc/GMT-0'
     - 'GMT-0'
+    - 'GMT+0'
   GMT_M0000+1:
     - 'Casablanca'
     - 'Casablanca GMT-0'
