@@ -1,15 +1,10 @@
 require 'aws-sdk-s3'
+require 'tp_common/file_storage/configuration'
 
 module TpCommon
   module FileStorage
-    Configuration = Struct.new(:aws_region,
-                               :aws_key_id,
-                               :aws_secret_key,
-                               :key_prefix,
-                               :default_bucket)
-
     def self.configure
-      @configuration = Configuration.new('us-east-1', nil, nil, nil, nil)
+      @configuration = TpCommon::FileStorage::Configuration.new('us-east-1')
 
       yield(@configuration)
 

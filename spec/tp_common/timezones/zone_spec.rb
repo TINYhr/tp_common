@@ -238,7 +238,7 @@ RSpec.describe TpCommon::Timezones::Zone do
   end
 
   describe '#date' do
-    let(:time) { Time.new(2017, 2, 3, 10, 0, 0) }
+    let(:time) { Time.new(2017, 2, 3, 10, 0, 0, "+00:00") }
     let(:key) { 'GMT_M0700' }
 
     let(:zone) do

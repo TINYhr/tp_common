@@ -1,5 +1,4 @@
 require 'fog/aws'
-require 'tp_common/file_storage/fog_connection'
 require 'tp_common/file_storage/key_protector'
 
 module TpCommon
@@ -8,7 +7,6 @@ module TpCommon
     class Base
       MAX_RETRIES = 3
 
-      include TpCommon::FileStorage::FogConnection
       include TpCommon::FileStorage::KeyProtector
 
       def initialize(directory_path = nil)
@@ -17,14 +15,13 @@ module TpCommon
 
       private
 
-      # Connection to S3, config in initializer
-      def connection
-        @connection ||= create_connection
-      end
-
       # Fog directory to bucket config in constructor
       def directory
-        @directory ||= connection.directories.get(@directory_path)
+        FileStorage.configuration.get_directory(@directory_path)
+      end
+
+      def connection
+        FileStorage.configuration.connection
       end
     end
   end
