@@ -7,7 +7,7 @@ gemfile:
   - gemfiles/rails_5.gemfile
   - gemfiles/rails_6.gemfile
   - gemfiles/rails_latest.gemfile
-before_install: gem install bundler -v 1.16.0
+before_install: gem install bundler -v 1.17.3
 script:
   - bundle exec rspec --exclude-pattern "spec/integration/**/*_spec.rb"
   - bundle exec rspec spec/integration/rails_spec.rb
