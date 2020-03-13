@@ -31,7 +31,11 @@ module TpCommon
     # ```
     class RemoteAssetsLoader
       DEFAULT_CDN = 'https://cdn.tinypulse.com/spa'
-      LoaderConfiguration = Struct.new(:cdn, :dev_cdn, :package_path_provider)
+      LoaderConfiguration = Struct.new(:cdn,
+                                       :dev_cdn,
+                                       :package_path_provider,
+                                       :enable_hot_reload,
+                                       :redis_connection)
 
       class << self
         # Configure RemoteAssetsLoader, for now, only :cdn is supported
@@ -43,6 +47,8 @@ module TpCommon
         def configure
           yield(config)
 
+          config.enable_hot_reload = !!config.enable_hot_reload
+          raise StandardError.new('Please add :redis_connection if enable hot_reload') if config.enable_hot_reload && config.redis_connection.nil?
           config.package_path_provider = TpCommon::AssetLoaders::ProviderClass.new(config.cdn, config.dev_cdn)
         end
 
@@ -56,10 +62,43 @@ module TpCommon
         # ```
         #   TpCommon::AssetLoaders::RemoteAssetsLoader.load(:'tinypulse-spa-1', ENV['SPA_VERSION_TINYPULSE_SPA_1_HOT_CHANGE'] || 'v1.0.0')
         # ```
-        def load(package_name, version)
-          package_name = package_name.to_sym
-          packages[package_name] = new(package_name, version)
-          packages
+        #
+        # For multiple packages:
+        # ```
+        #   TpCommon::AssetLoaders::RemoteAssetsLoader.load(
+        #     'tinypulse-spa-1': 'v1.0.0',
+        #     'tinypulse-spa-2': 'v1.0.0',
+        #     'tinypulse-spa-3': 'v1.0.0')
+        # ```
+        #
+        def load(package_name, version = nil)
+          if version
+            package_name = package_name.to_sym
+            packages[package_name] = new(package_name, version)
+            packages
+          else
+            all_packages = Hash(package_name)
+            all_packages.each do |key, ver|
+              packages[key] = new(key, ver)
+            end
+
+            packages
+          end
+        end
+
+        # TODO: [AV] Add desc before release
+        def cache_set(package_name, version)
+          config.redis_connection.set(cache_key(package_name), version)
+        end
+
+        # TODO: [AV] Add desc before release
+        def cache_get(package_name)
+          config.redis_connection.get(cache_key(package_name))
+        end
+
+        # TODO: [AV] Add desc before release
+        def cache_unset(package_name)
+          config.redis_connection.del(cache_key(package_name))
         end
 
         # Get package:
@@ -80,10 +119,21 @@ module TpCommon
         end
 
         def asset_url(package_name, version, asset)
+          if config.enable_hot_reload
+            cached_version = cache_get(package_name)
+            if cached_version
+              return config.package_path_provider.asset_url(package_name, cached_version, asset)
+            end
+          end
+
           config.package_path_provider.asset_url(package_name, version, asset)
         end
 
         private
+
+        def cache_key(package_name)
+          "tp_common/asset_loaders/remote_assets_loader/#{package_name}"
+        end
 
         def new_config
           LoaderConfiguration.new(DEFAULT_CDN, nil)

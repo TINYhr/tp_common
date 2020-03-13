@@ -2,6 +2,8 @@ sudo: false
 language: ruby
 rvm:
   - 2.5.3
+services:
+  - redis-server
 gemfile:
   - gemfiles/rails_4.gemfile
   - gemfiles/rails_5.gemfile
