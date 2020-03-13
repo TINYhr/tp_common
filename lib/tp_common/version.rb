@@ -1,3 +1,3 @@
 module TpCommon
-  VERSION = "0.4.8.pre1"
+  VERSION = "0.4.8"
 end
