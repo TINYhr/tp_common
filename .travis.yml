@@ -20,6 +20,7 @@ deploy:
     secure: nHtQxeCICi2KYSS/K7fQ1n50eLrE2kVwagxYXVU3cXDAfLyQRMT0StzZMqT3lM6HNhFrCQveZJMDgTpxaQKkYjbR4t9dmDA6OxaZmD/AUw6/rykNGiQVptGJymvnygmPUO+igXOlNot4IEN3VXQMuhpsVBY26ScUmMhIWvPU0hb8ZniG6NSU7/uORD46UqLWVvaU0jy3+OYQzyFBo/OxhTZmVPRMlK+Kz8SgrIHtp3A/l5KBg6s/KXGY/St58D3aQ6GsholYpdMEuMt2pEGF4PyJZJvIOJKGzY1GuSRUfB0lhFLWbPExY4PDzICtM3+8r69rMw9mnKVuq9kkYOMsiqi+iRZbsFd6v6y+V/n/00U/GW6/pf5GEzgBCW1okaYEI0Bau3E+hUe8nmbylOQGg99SdbEAs0B6U2vB5eCbnqZ1QZLK3xxIQpj54kd9RRnStcmO/CdNaLWsYqjWCizaAlmUOxFTJlP5cGeAdhbXytJxgDunjLpLXbdq1PnldF4AVZKr6hKBT50kt5Z0h2uAWiNMfjVxHLMk4CLYj4XDaBGiqzNhINaDzl06rDBAZ1oiHTeowq03+1gyXB64UVZW5IgnTEJYCEM75OF5yvEPf2NIowb7wU+pxnKo9tsjPoD7DafFz/NlYzHFauairj6SvKvjrPO3A3E+kFqVCIDY+gM=
   gem: tp_common
   on:
-    # tags: true
+    tags: true
     branch: master
     repo: TINYhr/tp_common
+    skip_cleanup: true
