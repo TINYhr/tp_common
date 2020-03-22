@@ -30,6 +30,11 @@ module TpCommon
         def url(file_key)
           directory.files.get(mask_key(file_key))&.public_url
         end
+
+        # @param file_key [String]
+        def exists?(file_key)
+          !!directory.files.head(mask_key(file_key))
+        end
       end
     end
   end

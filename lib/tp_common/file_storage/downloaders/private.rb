@@ -7,7 +7,7 @@ module TpCommon
       class Private < FileStorage::Base
         # Pull a file with provided key.
         # Return a Fog file object https://www.rubydoc.info/github/fog/fog-aws/Fog/Storage/AWS/File
-        #
+        # @param file_key [String]
         def download(file_key)
           retried_count = 0
           begin
@@ -22,8 +22,14 @@ module TpCommon
         end
 
         # Same as #download but return file content
+        # @param file_key [String]
         def read(file_key)
           download(mask_key(file_key)).body
+        end
+
+        # @param file_key [String]
+        def exists?(file_key)
+          !!directory.files.head(mask_key(file_key))
         end
       end
     end

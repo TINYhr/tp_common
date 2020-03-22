@@ -26,12 +26,18 @@ module TpCommon
 
           mask_key(file_key)
         end
+
         # Get url from key of file #upload above to provide to outside.
         #   To get file content to use inside system, please use Downloaders::Private instead
         # As private file, link has a ttl, default 1 week.
         #
         def url(file_key, link_ttl = 1.week.from_now)
           directory.files.get_https_url(mask_key(file_key), link_ttl)
+        end
+
+        # @param file_key [String]
+        def exists?(file_key)
+          !!directory.files.head(mask_key(file_key))
         end
       end
     end
